@@ -29,4 +29,10 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('app works!');
   }));
+
+  it('should get number 1', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+
+    expect(fixture.componentInstance.getNumberOne()).toEqual(1);
+  });
 });
